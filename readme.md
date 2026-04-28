@@ -53,40 +53,18 @@ server.js
 
 ## ⚙️ Installation
 
-1. Clone the repository:
+1. Clone the repository
+2. Install dependencies:
+   npm install
+3. Start the server:
+   npm run dev
 
-```bash
-git clone https://github.com/your-username/product-api.git
-```
-
-2. Navigate into the project folder:
-
-```bash
-cd product-api
-```
-
-3. Install dependencies:
-
-```bash
-npm install
-```
-
-4. Create a `.env` file and add your environment variables:
-
-```
-PORT=5000
-DATABASE_URL=your_database_connection_string
-```
-
-5. Start the server:
-
-```bash
-npm run dev
-```
+const PORT = process.env.PORT || 5000;
+The server runs on http://localhost:5000
 
 ---
 
-## 📡 API Endpoints
+## 📡 API Endpoints (planned)
 
 | Method | Endpoint          | Description          |
 | ------ | ----------------- | -------------------- |
@@ -95,37 +73,6 @@ npm run dev
 | POST   | /api/products     | Create a new product |
 | PUT    | /api/products/:id | Update a product     |
 | DELETE | /api/products/:id | Delete a product     |
-
----
-
-## 🧪 Testing
-
-You can test the API using:
-
-* Postman
-* Thunder Client (VS Code extension)
-* curl
-
----
-
-## Error Handling
-
-This API returns standard HTTP status codes:
-
-* `200` – Success
-* `201` – Resource created
-* `400` – Bad request
-* `404` – Not found
-* `500` – Server error
-
----
-
-## 🔐 Environment Variables
-
-Make sure to configure the following in your `.env` file:
-
-* `PORT`
-* `DATABASE_URL`
 
 ---
 
@@ -141,21 +88,3 @@ David Caleb
 GitHub: https://github.com/thegatekeepa
 
 ---
----
----
-
-# Project Name
-
-## Description
-What the API does
-
-## Installation
-How to run it
-
-## Endpoints
-Basic list of routes
-
-## Tech Stack
-What you used
-
-## License

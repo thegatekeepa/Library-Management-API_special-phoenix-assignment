@@ -59,8 +59,8 @@ server.js
 3. Start the server:
    npm run dev
 
-const PORT = process.env.PORT || 5000;
-The server runs on http://localhost:5000
+const PORT = process.env.PORT || 2002;
+The server runs on http://localhost:2002
 
 ---
 

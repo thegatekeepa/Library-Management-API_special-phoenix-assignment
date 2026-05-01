@@ -51,7 +51,7 @@ server.js
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 1. Clone the repository
 2. Install dependencies:
@@ -59,12 +59,12 @@ server.js
 3. Start the server:
    npm run dev
 
-const PORT = process.env.PORT || 5000;
-The server runs on http://localhost:5000
+const PORT = process.env.PORT || 2002;
+The server runs on http://localhost:2002
 
 ---
 
-## 📡 API Endpoints (planned)
+## API Endpoints (planned)
 
 | Method | Endpoint          | Description          |
 | ------ | ----------------- | -------------------- |

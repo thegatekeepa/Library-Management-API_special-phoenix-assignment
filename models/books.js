@@ -8,6 +8,7 @@ const booksSchema = new mongoose.Schema({
         enum: ["IN", "OUT"],
         default: "IN"
     },
+    addedBy: {type: mongoose.Schema.Types.ObjectId, ref: "author"},
     borrowedBy: {type: mongoose.Schema.Types.ObjectId, ref: "students"},
     issuedBy: {type: mongoose.Schema.Types.ObjectId, ref: "libraryAttendant"},
     

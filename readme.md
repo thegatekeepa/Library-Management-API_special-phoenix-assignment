@@ -68,11 +68,11 @@ The server runs on http://localhost:2002
 
 | Method | Endpoint          | Description          |
 | ------ | ----------------- | -------------------- |
-| GET    | /api/products     | Get all products     |
-| GET    | /api/products/:id | Get a single product |
-| POST   | /api/products     | Create a new product |
-| PUT    | /api/products/:id | Update a product     |
-| DELETE | /api/products/:id | Delete a product     |
+| GET    | /api/author     | Get all author     |
+| GET    | /api/author/:id | Get a single author |
+| POST   | /api/author     | Create a new author |
+| PUT    | /api/author/:id | Update a author     |
+| DELETE | /api/author/:id | Delete an author     |
 
 ---
 

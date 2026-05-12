@@ -1,4 +1,5 @@
 const Author = require("../models/author");
+const router = require("../routes/authorRoutes");
 
 //Create Author -- Step 1
 exports.createAuthor = async (req, res) => {
@@ -13,8 +14,8 @@ exports.createAuthor = async (req, res) => {
 //Get All Author -- Step 2
 exports.getAuthors = async (req, res) => {
     try {
-        const authors = await Author.find();
-        res.json(authors);
+        const showAuthors = await Author.find();
+        res.json(showAuthors);
     } catch (err) {
         res.status(500).json({error: err.message});
     }
@@ -51,10 +52,11 @@ exports.deleteAuthor = async (req, res) => {
         const deletedAuthor = await Author.findByIdAndDelete(req.params.id);
 
         if(!deletedAuthor) {
-            return res.status(404).json({message: "Invalid Author Id, so Author not found."});
+            return res.status(404).json({message: "The ID you entered is not assigned to any Author"});
         };
-        res.json({message: "Author deleted successfully"});
+        return res.json({message: "Author deleted successfully"});
     } catch {
         res.status(500).json({message:"Internal server error"});
     }
 };
+

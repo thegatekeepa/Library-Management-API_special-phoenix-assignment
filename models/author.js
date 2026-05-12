@@ -4,7 +4,10 @@ const authorSchema = new mongoose.Schema({
     name: {type: String, required: true},
     bio: {type: String, required: true}, 
     dob: {type: String, required: true},
+    authorId: {type: String, unique: true}
 }, 
 {timestamps: true});
+
+
 
 module.exports = mongoose.model("author", authorSchema);

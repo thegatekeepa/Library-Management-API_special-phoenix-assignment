@@ -1,11 +1,16 @@
-const express = require("express");
-const dotenv = require("dotenv");
-const connectDB = require("./config/database");
+const express = require("express"); //import express
+const dotenv = require("dotenv"); //import the environment defining package of Node.js
+const connectDB = require("./config/database"); //import MongoDB
 
-dotenv.config();
-connectDB();
+dotenv.config(); //conect dotenv so it can read my .env file and load any called value inside it throughout my work
+connectDB(); //connnect to the MongoDB
 
 const app = express();
-
 app.use(express.json());
 
+app.use("/author", require("./routes/authorRoutes"));
+
+const PORT = process.env.PORT
+app.listen(PORT, () => {
+    console.log(`Congratulations! The Library Server is now live on ${PORT}`);
+});

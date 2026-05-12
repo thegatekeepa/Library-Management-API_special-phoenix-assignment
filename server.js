@@ -9,6 +9,9 @@ const app = express();
 app.use(express.json());
 
 app.use("/author", require("./routes/authorRoutes"));
+app.use("/books", require("./routes/bookRoutes"));
+app.use("/students", require("./routes/studentRoutes"));
+app.use("/libraryAttendant", require("./routes/attendantRoutes"));
 
 const PORT = process.env.PORT
 app.listen(PORT, () => {

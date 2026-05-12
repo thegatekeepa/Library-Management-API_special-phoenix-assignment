@@ -3,17 +3,22 @@ const router = express.Router();
 
 const {
     addBook, 
-    getBook,
     getBooks,
+    getBook,
     borrowBook,
+    returnBook,
+    updateBook,
     deleteBook
 } = require("../controller/bookController");
 
 router.post("/", addBook); // CREATE
-router.get("/:id", getBook);    // READ ALL
-router.get("/", getBooks);  // READ ONE
-router.patch("/:id", borrowBook);   // UPDATE
+router.get("/", getBooks);    // READ ALL
+router.get("/:id", getBook);  // READ ONE
+router.post("/:id/borrow", borrowBook); //BORROW BOOK
+router.post("/:id/return", returnBook); // RETURN BOOK
+router.patch("/:id", updateBook); //UPDATE BOOK
 router.delete("/:id", deleteBook);   // DELETE
 
 
 module.exports = router;
+//ChatGPT Help
